@@ -1,60 +1,93 @@
 # MNIST Handwritten Digit Classification using PyTorch
 
-In this project, we use PyTorch and linear models to solve an image classification problem with the famous **MNIST Handwritten Digits Database**. This dataset contains 28×28 grayscale images of handwritten digits (0–9), along with labels indicating the digit each image represents.
+This repository demonstrates handwritten digit classification on the **MNIST dataset** using **PyTorch**.  
+The project is implemented in **two Jupyter notebooks** to show how adding a hidden layer and nonlinearity improves model performance.
 
 ---
 
-## Dataset
+## 📌 Overview
 
-The **MNIST dataset** consists of:
+- Dataset: **MNIST Handwritten Digits (0–9)**
+- Image size: **28×28 grayscale**
+- Framework: **PyTorch**
+- Goal: Compare a **simple linear model** with a **nonlinear neural network**
 
-- **Images:** 28×28 grayscale images of handwritten digits
-- **Labels:** Digit labels (0–9) corresponding to each image
+---
 
-Example images from the dataset:
+## 🧠 Models Implemented
+
+### 1️⃣ Simple Neural Network (Linear Model)
+
+- Single `nn.Linear` layer  
+- Input: 784 (flattened 28×28 image)  
+- Output: 10 classes  
+- No hidden layers or nonlinear activation  
+- Equivalent to multinomial logistic regression  
+
+📓 Notebook: `mnist_linear_model.ipynb`
+
+---
+
+### 2️⃣ Neural Network with Hidden Layer
+
+- One hidden layer  
+- Nonlinear activation (e.g., ReLU)  
+- Learns more complex feature representations  
+- Achieves **~15% higher accuracy** than the linear model  
+
+📓 Notebook: `mnist_hidden_layer_model.ipynb`
+
+---
+
+## 📊 Dataset
+
+The MNIST dataset contains:
+
+- **60,000** training images  
+- **10,000** test images  
+- Each image is a **28×28 grayscale handwritten digit**
+
+Example images:
 
 ![MNIST Sample](https://upload.wikimedia.org/wikipedia/commons/2/27/MnistExamples.png)
 
-> Each image is a single handwritten digit. Our goal is to train a model to correctly classify these digits.
+---
+
+## 🔧 Project Workflow
+
+1. Load MNIST using `torchvision.datasets`
+2. Preprocess images:
+   - Convert to tensors
+   - Normalize pixel values
+3. Create `DataLoader` for batching
+4. Define model architectures
+5. Train using:
+   - `CrossEntropyLoss`
+   - SGD or Adam optimizer
+6. Evaluate and compare model accuracy
 
 ---
 
-## Project Steps
+## 📈 Results
 
-1. **Load and Explore the Dataset**  
-   - Download MNIST using PyTorch's `torchvision.datasets`  
-   - Visualize sample images and inspect their labels
+| Model | Description | Accuracy |
+|------|------------|----------|
+| Linear Model | Single linear layer | Baseline |
+| Hidden Layer Model | Nonlinear NN | **~15% higher** |
 
-2. **Prepare the Dataset**  
-   - Convert images to tensors  
-   - Normalize pixel values  
-   - Split dataset into training and validation sets  
-   - Use `DataLoader` for batching
-
-3. **Build a Linear Model**  
-   - Implement a simple linear classifier using `nn.Linear`  
-   - Flatten 28×28 images into 784-dimensional input vectors
-
-4. **Train the Model**  
-   - Use a loss function (CrossEntropyLoss)  
-   - Optimize model parameters with an optimizer like SGD or Adam  
-   - Track training and validation accuracy
-
-5. **Evaluate the Model**  
-   - Calculate accuracy on the validation/test set  
-   - Visualize predictions for sample images
+> Adding a hidden layer and nonlinearity significantly improves classification accuracy, even with a small architectural change.
 
 ---
 
-## Requirements
+## 📦 Requirements
 
-- Python 3.8+  
-- PyTorch  
-- torchvision  
-- matplotlib / seaborn (optional for visualization)  
-- numpy  
+- Python 3.8+
+- PyTorch
+- torchvision
+- numpy
+- matplotlib (optional)
 
-Install dependencies with:
+Install dependencies:
 
 ```bash
-pip install torch torchvision matplotlib numpy
+pip install torch torchvision numpy matplotlib
