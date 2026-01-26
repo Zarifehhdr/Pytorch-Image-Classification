@@ -92,11 +92,6 @@ Install dependencies:
 ```bash
 pip install torch torchvision numpy matplotlib
 
-
-## How to Run
-
-git clone https://github.com/your-username/mnist-pytorch.git
-cd mnist-pytorch
-jupyter notebook
-
+```
+## Key Takeaway
 This project highlights the importance of nonlinearity and model depth in neural networks and shows how a simple hidden layer can dramatically improve performance on image classification tasks.
