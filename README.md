@@ -26,7 +26,7 @@ The project is implemented in **multiple Jupyter notebooks** to show how adding 
 - No hidden layers or nonlinear activation  
 - Equivalent to multinomial logistic regression  
 
-📓 Notebook: `mnist_linear_model.ipynb`
+📓 Notebook: `Pytorch_ImageClassification_LogisticRegression .ipynb`
 
 ---
 
@@ -37,7 +37,7 @@ The project is implemented in **multiple Jupyter notebooks** to show how adding 
 - Learns more complex feature representations  
 - Achieves **~15% higher accuracy** than the linear model on MNIST  
 
-📓 Notebook: `mnist_hidden_layer_model.ipynb`
+📓 Notebook: `Pytorch_Feedforward_ImageClassification.ipynb`
 
 ---
 
@@ -51,7 +51,8 @@ The project is implemented in **multiple Jupyter notebooks** to show how adding 
   - Face a more challenging classification task due to higher visual similarity between classes
 - Highlights the importance of **nonlinearity and representation learning** even more strongly than digit classification
 
-📓 Notebook: `fashion_mnist_classification.ipynb`
+📓 Notebook: `Pytorch_fashionMNIST_Classification_feedforward.ipynb
+`
 
 ---
 
